@@ -12,13 +12,13 @@ import { BsActivity } from "react-icons/bs";
 import { HiOutlineUsers } from "react-icons/hi2";
 import { FcPieChart } from "react-icons/fc";
 
-import Sections from "./Sections";
+import Sections from "../Sections";
 import DropdownList from "./DropdownList";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex flex-col w-72 border space-x-4 fixed top-0 h-full justify-evenly">
+    <div className="flex flex-col w-72 border space-x-4  top-0 left-0 h-full justify-evenly ">
       <span className="font-medium text-3xl flex items-center px-10">
         <FcPieChart className="w-10 h-10" />
         CRMHUB

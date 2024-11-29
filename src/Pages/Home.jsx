@@ -1,6 +1,12 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar/Navbar";
+import Header from "../components/header/Header";
 const Home = () => {
-  return <Navbar />;
+  return (
+    <div className="flex">
+      <Navbar />
+      <Header />
+    </div>
+  );
 };
 
 export default Home;
