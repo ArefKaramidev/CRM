@@ -6,7 +6,7 @@ import Input from "./Input";
 
 const Header = () => {
   return (
-    <div className="w-full px-10 h-20 border flex justify-between items-center">
+    <div className="w-full px-10 h-20 border flex justify-between items-center bg-white">
       <div>
         <Input
           icon={<IoSearchOutline className="text-gray-400 text-xl" />}
@@ -22,7 +22,7 @@ const Header = () => {
         </div>
         <div className="flex items-center relative">
           <img
-            src="/src/img/Screenshot 2024-10-05 001516.png"
+            src="/src/img/3052.png_300.png"
             alt=""
             className="rounded-full w-10 h-10 bg-gray-100 absolute -left-8"
           />

@@ -16,17 +16,19 @@ import Sections from "../Sections";
 import DropdownList from "./DropdownList";
 
 const Navbar = () => {
+
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="flex flex-col w-72 border space-x-4  top-0 left-0 h-full justify-evenly ">
-      <span className="font-medium text-3xl flex items-center px-10">
+    <div className="flex flex-col w-72 border top-0 left-0 h-full p-5 bg-white">
+      <span className="font-medium text-3xl flex items-center px-10 my-7">
         <FcPieChart className="w-10 h-10" />
         CRMHUB
       </span>
       <div className="pb-5">
         <span className="text-gray-400 font-medium px-2">MENU</span>
         <span
-          className="text-primary-0 hover:bg-blue-200 hover:bg-opacity-10 hover:text-blue-600 flex items-center gap-x-2 font-medium h-16"
+          className="px-2 rounded-md text-primary-0 hover:bg-blue-300 hover:bg-opacity-15 hover:text-blue-600 flex items-center gap-x-2 font-medium h-16"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
