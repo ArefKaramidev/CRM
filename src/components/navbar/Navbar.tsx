@@ -16,11 +16,10 @@ import Sections from "../Sections";
 import DropdownList from "./DropdownList";
 
 const Navbar = () => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col w-72 border top-0 left-0 h-full p-5 bg-white">
+    <div className="flex flex-col w-72 border top-0 left-0 h-full p-5 bg-white fixed z-20">
       <span className="font-medium text-3xl flex items-center px-10 my-7">
         <FcPieChart className="w-10 h-10" />
         CRMHUB

@@ -6,7 +6,10 @@ import Input from "./Input";
 
 const Header = () => {
   return (
-    <div className="w-full px-10 h-20 border flex justify-between items-center bg-white">
+    <div
+      className="w-full px-10 h-20 border flex justify-between items-center 
+     z-30 bg-white"
+    >
       <div>
         <Input
           icon={<IoSearchOutline className="text-gray-400 text-xl" />}

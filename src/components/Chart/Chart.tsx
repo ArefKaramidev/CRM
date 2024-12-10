@@ -11,7 +11,6 @@ import {
   ChartConfig,
   ChartContainer,
   ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
 } from "keep-react";
 
@@ -37,7 +36,7 @@ export const Chart = () => {
   return (
     <ChartContainer
       config={chartConfig}
-      className="min-h-[200px] w-[40rem] h-80 bg-white"
+      className="min-h-[200px] w-[40rem] h-80 bg-white m-5 rounded-lg"
     >
       <BarChart data={chartData} width={500} height={300}>
         <CartesianGrid strokeDasharray="5 5" vertical={false} />
