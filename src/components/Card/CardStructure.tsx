@@ -4,7 +4,7 @@ import { analyticksItem } from "../../types/analyticksItem";
 
 const CardStructure = ({ title, total, profit, time }: analyticksItem) => {
   return (
-    <div className="flex flex-col w-80 gap-y-8 bg-white rounded-xl p-5 flex-wrap m-5 duration-200 hover:shadow-xl hover:border-b-blue-500 hover:border-b-4 cursor-pointer">
+    <div className="flex flex-col w-80 gap-y-8 bg-white border-b-4 border-white rounded-xl p-5 flex-wrap m-5 duration-200 hover:shadow-xl hover:border-b-blue-500 cursor-pointer hover:-translate-y-1">
       <div className="flex items-center justify-between">
         <div className="flex flex-col gap-y-2">
           <span className="text-primary-0 ">{title}</span>
