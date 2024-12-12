@@ -34,59 +34,58 @@ export const Chart = () => {
   } satisfies ChartConfig;
 
   return (
-    <ChartContainer
-      config={chartConfig}
-      className="min-h-[200px] w-[40rem] h-80 bg-white m-5 rounded-lg"
-    >
-      <BarChart data={chartData} width={500} height={300}>
-        <CartesianGrid strokeDasharray="5 5" vertical={false} />
-        <CartesianGrid vertical={false} />
-        <YAxis
-          dataKey="sales"
-          tickLine={false}
-          tickMargin={24}
-          axisLine={false}
-          ticks={[10, 20, 30, 40, 50, 60]}
-        />
-        <XAxis
-          dataKey="month"
-          tickLine={false}
-          tickMargin={10}
-          axisLine={false}
-        />
-        <XAxis
-          axisLine={{
-            stroke: "#1B4DFF",
-            strokeWidth: 1,
-            strokeDasharray: "5 5",
-          }}
-        />
-
-        <ChartTooltip wrapperClassName="style-tooltip" />
-        <ChartLegend
-          verticalAlign="top"
-          wrapperStyle={{
-            fontWeight: 600,
-            fontSize: "20px",
-            display: "flex",
-            justifyContent: "start",
-            marginLeft: "30px",
-            paddingBottom: "20px",
-          }}
-        />
-        <Bar dataKey="Sales" radius={[8, 8, 0, 0]} barSize={50}>
-          //* for diffrent color
-          {chartData.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={entry.color} />
-          ))}
-          <LabelList
-            position="top"
-            offset={12}
-            className="fill-metal-600 dark:fill-metal-300"
-            fontSize={12}
+    <div className="w-[21rem] h-80 overflow-x-scroll bg-white m-5 rounded-lg">
+      <ChartContainer config={chartConfig} className=" h-80 ">
+        <BarChart data={chartData} width={500} height={300}>
+          <CartesianGrid strokeDasharray="5 5" vertical={false} />
+          <CartesianGrid vertical={false} />
+          <YAxis
+            dataKey="sales"
+            tickLine={false}
+            tickMargin={24}
+            axisLine={false}
+            ticks={[10, 20, 30, 40, 50, 60]}
           />
-        </Bar>
-      </BarChart>
-    </ChartContainer>
+          <XAxis
+            dataKey="month"
+            tickLine={false}
+            tickMargin={10}
+            axisLine={false}
+          />
+          <XAxis
+            axisLine={{
+              stroke: "#1B4DFF",
+              strokeWidth: 1,
+              strokeDasharray: "5 5",
+            }}
+          />
+
+          <ChartTooltip wrapperClassName="style-tooltip" />
+          <ChartLegend
+            verticalAlign="top"
+            wrapperStyle={{
+              fontWeight: 600,
+              fontSize: "20px",
+              display: "flex",
+              justifyContent: "start",
+              marginLeft: "30px",
+              paddingBottom: "20px",
+            }}
+          />
+          <Bar dataKey="Sales" radius={[8, 8, 0, 0]} barSize={50}>
+            //* for diffrent color
+            {chartData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={entry.color} />
+            ))}
+            <LabelList
+              position="top"
+              offset={12}
+              className="fill-metal-600 dark:fill-metal-300"
+              fontSize={12}
+            />
+          </Bar>
+        </BarChart>
+      </ChartContainer>
+    </div>
   );
 };

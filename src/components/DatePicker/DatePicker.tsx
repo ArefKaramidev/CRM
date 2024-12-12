@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { format } from "date-fns";
 import { Calendar } from "phosphor-react";
@@ -34,11 +33,11 @@ export const DatePickerComponent = () => {
       </PopoverAction>
       <PopoverContent
         align="start"
-        className="max-w-min border-0 bg-blue-400 absolute w-[21rem] border-none outline-none h-[22rem] top-full"
+        className="max-w-min border-0 absolute w-[21rem] border-none outline-none h-[22rem] top-full "
         side="bottom"
       >
         <DatePicker
-          className="bg-transparent border-none outline-none"
+          className="bg-white text-black active:bg-blue-500 active:text-black"
           mode="single"
           selected={date}
           onSelect={setDate}

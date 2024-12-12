@@ -7,7 +7,7 @@ import Input from "./Input";
 const Header = () => {
   return (
     <div
-      className="w-full px-10 h-20 border flex justify-between items-center 
+      className="w-full hidden px-10 h-20 border sm:flex justify-between items-center 
      z-30 bg-white"
     >
       <div>
