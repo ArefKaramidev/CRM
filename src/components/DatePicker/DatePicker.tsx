@@ -8,6 +8,7 @@ import {
   PopoverAction,
   PopoverContent,
 } from "keep-react";
+import { style } from "@mui/system";
 
 export const DatePickerComponent = () => {
   const [date, setDate] = useState<Date>();
@@ -37,7 +38,6 @@ export const DatePickerComponent = () => {
         side="bottom"
       >
         <DatePicker
-          className="bg-white text-black active:bg-blue-500 active:text-black"
           mode="single"
           selected={date}
           onSelect={setDate}

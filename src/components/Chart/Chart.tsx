@@ -34,7 +34,7 @@ export const Chart = () => {
   } satisfies ChartConfig;
 
   return (
-    <div className="w-[21rem] h-80 overflow-x-scroll bg-white m-5 rounded-lg">
+    <div className="w-[21rem] h-80 overflow-x-scroll bg-white m-5 rounded-lg sm:w-[40rem] sm:overflow-auto">
       <ChartContainer config={chartConfig} className=" h-80 ">
         <BarChart data={chartData} width={500} height={300}>
           <CartesianGrid strokeDasharray="5 5" vertical={false} />

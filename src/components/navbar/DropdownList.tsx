@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const DropdownList = () => {
   return (
-    <ul className="flex flex-col">
+    <ul className="flex flex-col cursor-pointer">
       <li className="text-primary-0 font-medium flex items-center gap-x-2 hover:bg-gray-100 hover:text-blue-600 h-14 px-3">
         <FaCircle className="w-2 h-2" />
         <NavLink to={"/"}>Home page</NavLink>
