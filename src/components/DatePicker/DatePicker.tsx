@@ -8,7 +8,6 @@ import {
   PopoverAction,
   PopoverContent,
 } from "keep-react";
-import { style } from "@mui/system";
 
 export const DatePickerComponent = () => {
   const [date, setDate] = useState<Date>();
@@ -21,10 +20,10 @@ export const DatePickerComponent = () => {
         <Button
           color="secondary"
           size="lg"
-          className="w-[21rem] justify-start gap-2.5 border border-metal-100 text-body-4"
+          className="w-[21rem] justify-start gap-2.5 border border-metal-100 text-body-4  text-black"
           variant="outline"
         >
-          <Calendar size={20} className="text-metal-400 dark:text-white" />
+          <Calendar size={20} className="text-metal-600 dark:text-white" />
           {date ? (
             format(date ?? new Date(), "PPP")
           ) : (
