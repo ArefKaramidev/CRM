@@ -6,16 +6,16 @@ import { Chart } from "../components/Chart/Chart";
 import { DatePickerComponent } from "../components/DatePicker/DatePicker";
 const Home = () => {
   return (
-    <div className="flex items-center text-center justify-center sm:m-0 ">
+    <div className="flex items-center text-center justify-center sm:m-0 xl:text-left">
       <Navbar />
       <div className="w-full sm:ml-72">
         <Header />
-        <Card />
+        <Card start={0} end={4} />
         <div className="flex flex-col items-center sm:flex-row sm:items-start sm:gap-x-10">
           <Chart />
           <DatePickerComponent />
         </div>
-        <div className="mt-96">
+        <div className="mt-96 xl:mt-24">
           <Cases />
         </div>
       </div>

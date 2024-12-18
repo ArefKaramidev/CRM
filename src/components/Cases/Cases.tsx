@@ -2,6 +2,7 @@ import { FaChevronDown } from "react-icons/fa6";
 import { casesData } from "../../constants/Cases";
 import { CiFilter } from "react-icons/ci";
 import { BsPlusLg } from "react-icons/bs";
+import Button from "../button/Button";
 
 // Function to get random color classes for background
 const getRandomColorClasses = () => {
@@ -18,18 +19,22 @@ const getRandomColorClasses = () => {
 
 const Cases = () => {
   return (
-    <div className="inline-block rounded-2xl w-80 bg-white p-5 m-5 overflow-x-auto">
+    <div className="inline-block rounded-2xl w-80 bg-white p-5 m-5 overflow-x-auto xl:w-[65rem] xl:block">
       <div className="items-center justify-between hidden md:flex">
         <span className="font-bold text-2xl pl-20">My Cases</span>
         <div className="flex items-center gap-x-2">
-          <button className="border rounded-md text-gray-700 flex items-center gap-x-2 px-5 py-2">
-            <CiFilter />
+          <Button
+            style="border rounded-md text-gray-700 flex items-center gap-x-2 px-5 py-2"
+            icon={<CiFilter />}
+          >
             Filter
-          </button>
-          <button className="border-none bg-blue-500 text-white flex items-center gap-x-2 rounded-md px-5 py-2 text-lg">
-            <BsPlusLg />
+          </Button>
+          <Button
+            style="border-none bg-blue-500 text-white flex items-center gap-x-2 rounded-md px-5 py-2 text-lg"
+            icon={<BsPlusLg />}
+          >
             New Cases
-          </button>
+          </Button>
         </div>
       </div>
       <table className="border-separate border-spacing-x-20 text-left border-spacing-y-5 border rounded-xl mt-4 overflow-x-scroll">
