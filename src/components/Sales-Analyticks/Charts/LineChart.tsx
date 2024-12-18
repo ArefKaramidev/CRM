@@ -28,7 +28,7 @@ export const LineChartComponent = () => {
   } satisfies ChartConfig;
 
   return (
-    <div className=" bg-white p-5 rounded-lg">
+    <div className=" bg-white p-5 rounded-lg m-5">
       <div className="flex items-start justify-between">
         <h3 className="text-left text-lg font-semibold mb-4">
           My Monthly Data
