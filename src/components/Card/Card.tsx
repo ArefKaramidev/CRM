@@ -4,7 +4,7 @@ import CardStructure from "./CardStructure.js";
 
 const Card = () => {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-center md:justify-start">
       {analytics.map((item: analyticksItem) => (
         <CardStructure
           key={item.id}

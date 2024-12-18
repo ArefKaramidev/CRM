@@ -12,7 +12,7 @@ import {
 export const DatePickerComponent = () => {
   const [date, setDate] = useState<Date>();
   return (
-    <Popover defaultOpen>
+    <Popover open>
       <PopoverAction
         asChild
         className="shadow-lg rounded-lg flex items-center justify-center py-5 duration-200  active:shadow-none"

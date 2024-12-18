@@ -1,4 +1,6 @@
-export const CasesData: object[] = [
+import { CasesItem } from "../types/casesItem";
+
+export const casesData: CasesItem[] = [
   {
     id: 1,
     name: "Warranty Coverage",
