@@ -37,37 +37,37 @@ const Cases = () => {
           </Button>
         </div>
       </div>
-      <table className="border-separate border-spacing-x-20 text-left border-spacing-y-5 border rounded-xl mt-4 overflow-x-scroll">
-        <thead>
+      <table className="border outline outline-1 outline-slate-300 border-collapse w-full text-left rounded-xl mt-4 overflow-hidden">
+        <thead className="bg-gray-100 text-gray-600 border border-slate-200">
           <tr className="text-sm font-normal text-gray-500">
-            <th className="flex items-center gap-x-2">
+            <th className="flex items-center gap-x-2 px-10 py-2 bg">
               <input type="checkbox" disabled />#
             </th>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Status</th>
-            <th>Priority</th>
-            <th></th>
+            <th className="px-10 py-2">Name</th>
+            <th className="px-10 py-2">Type</th>
+            <th className="px-10 py-2">Status</th>
+            <th className="px-10 py-2">Priority</th>
+            <th className="px-10 py-2"></th>
           </tr>
         </thead>
         {casesData.map((item) => (
-          <tbody key={item.id}>
+          <tbody key={item.id} className="border border-slate-200">
             <tr>
-              <td className="flex items-center gap-x-2">
+              <td className="flex items-center gap-x-2 px-10 py-4">
                 <input type="checkbox" />
                 {item.id}
               </td>
-              <td>{item.name}</td>
-              <td>{item.type}</td>
-              <td>
+              <td className="px-10 py-4">{item.name}</td>
+              <td className="px-10 py-4">{item.type}</td>
+              <td className="px-10 py-4">
                 <span
                   className={`rounded-md px-2 py-1 text-center text-white inline-block w-20 bg-opacity-75  ${getRandomColorClasses()}`}
                 >
                   {item.status}
                 </span>
               </td>
-              <td>{item.priority}</td>
-              <td>
+              <td className="px-10 py-4">{item.priority}</td>
+              <td className="px-10 py-4">
                 <FaChevronDown className="text-gray-500" />
               </td>
             </tr>
