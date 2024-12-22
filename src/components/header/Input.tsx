@@ -1,9 +1,16 @@
 import { InputT } from "../../types/input";
 
-const Input = ({ type, placeHolder, icon, style }: InputT) => {
+const Input = ({
+  type,
+  placeHolder,
+  icon,
+  inputStyle,
+  parentStyle,
+}: InputT) => {
   return (
-    <div className="flex items-center bg-gray-100 rounded-md px-2">
-      {icon} <input type={type} className={style} placeholder={placeHolder} />
+    <div className={`${parentStyle} flex items-center rounded-md px-2`}>
+      {icon}
+      <input type={type} className={inputStyle} placeholder={placeHolder} />
     </div>
   );
 };

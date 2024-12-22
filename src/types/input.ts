@@ -4,5 +4,6 @@ export type InputT = {
   type: string;
   placeHolder: string;
   icon: ReactNode;
-  style: string;
+  inputStyle: string;
+  parentStyle?: string;
 };

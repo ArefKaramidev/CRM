@@ -15,7 +15,8 @@ const Header = () => {
           icon={<IoSearchOutline className="text-gray-400 text-xl" />}
           placeHolder="Search"
           type="text"
-          style="bg-gray-100 border-none outline-none px-2 py-2 w-96"
+          inputStyle=" bg-gray-100 border-none outline-none px-2 py-2 w-96"
+          parentStyle="bg-gray-100"
         />
       </div>
       <div className="flex items-center justify-evenly gap-x-10">
