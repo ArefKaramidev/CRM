@@ -4,7 +4,11 @@ import Card from "../components/card/Card";
 import Cases from "../components/Cases/Cases";
 import { Chart } from "../components/Chart/Chart";
 import { DatePickerComponent } from "../components/DatePicker/DatePicker";
+import { useEffect } from "react";
 const Home = () => {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex items-center text-center justify-center sm:m-0 xl:text-left">
       <Navbar />

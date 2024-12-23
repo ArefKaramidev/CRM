@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Card from "../components/Card/Card";
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
@@ -7,6 +8,9 @@ import { LineChartComponent } from "../components/Sales-Analyticks/Charts/LineCh
 import { PieChartComponent } from "../components/Sales-Analyticks/Charts/PieChart";
 
 const SalesAnalyticks = () => {
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex items-center text-center justify-center sm:m-0 xl:text-left">
       <Navbar />

@@ -4,6 +4,9 @@ import Input from "../Header/Input";
 import { IoSearchOutline } from "react-icons/io5";
 import Button from "../button/Button";
 import { FaPlus } from "react-icons/fa6";
+import { useState } from "react";
+import { CiEdit } from "react-icons/ci";
+import { MdOutlineDelete } from "react-icons/md";
 
 const getRandomColorClasses = () => {
   const bgColors = [
@@ -18,6 +21,12 @@ const getRandomColorClasses = () => {
 };
 
 const TableAccounts = () => {
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const toggleDropDown = (id: number) => {
+    setOpenDropdown((prev) => (prev === id ? null : id));
+  };
+
   return (
     <div className="mt-10 w-[72rem]">
       <div className="flex items-center justify-between">
@@ -72,8 +81,28 @@ const TableAccounts = () => {
                     {item.type}
                   </span>
                 </td>
-                <td className="px-14 py-4">
-                  <GoKebabHorizontal className="text-gray-500" />
+                <td className=" relative px-14 py-4">
+                  <button
+                    className="hover:bg-gray-100 rounded-xl p-1"
+                    onClick={() => {
+                      toggleDropDown(item.id);
+                    }}
+                  >
+                    <GoKebabHorizontal className="text-gray-500" />
+                  </button>
+
+                  {openDropdown == item.id && (
+                    <div className="absolute right-20 flex flex-col gap-y-2 p-2 top-12 w-32 bg-white rounded-lg shadow-lg border z-10">
+                      <span className="flex items-center gap-x-1 cursor-pointer hover:text-slate-700">
+                        <CiEdit />
+                        Edit
+                      </span>
+                      <span className="flex items-center gap-x-1 cursor-pointer hover:text-slate-700">
+                        <MdOutlineDelete className="text-red-500" />
+                        Remove
+                      </span>
+                    </div>
+                  )}
                 </td>
               </tr>
             </tbody>
