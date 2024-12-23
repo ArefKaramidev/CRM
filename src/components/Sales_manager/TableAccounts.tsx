@@ -2,11 +2,11 @@ import { accounts } from "../../constants/accounts";
 import { GoKebabHorizontal } from "react-icons/go";
 import Input from "../Header/Input";
 import { IoSearchOutline } from "react-icons/io5";
-import Button from "../button/Button";
 import { FaPlus } from "react-icons/fa6";
 import { useState } from "react";
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDelete } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const getRandomColorClasses = () => {
   const bgColors = [
@@ -31,12 +31,13 @@ const TableAccounts = () => {
     <div className="mt-10 w-[72rem]">
       <div className="flex items-center justify-between">
         <span className="font-bold text-2xl pl-10">Accounts</span>
-        <Button
-          style="border-none bg-blue-500 font-normal text-sm text-white flex items-center gap-x-2 rounded-lg px-3 py-3 text-lg"
-          icon={<FaPlus className="text-lg" />}
+        <NavLink
+          to={"/create_account"}
+          className="border-none bg-blue-500 font-normal text-sm text-white flex items-center gap-x-2 rounded-lg px-3 py-3"
         >
+          <FaPlus className="text-lg" />
           Create Account
-        </Button>
+        </NavLink>
       </div>
       <div className="inline-block rounded-xl w-80 bg-white p-5 m-5 overflow-x-auto xl:w-[72rem] xl:block">
         <div>
