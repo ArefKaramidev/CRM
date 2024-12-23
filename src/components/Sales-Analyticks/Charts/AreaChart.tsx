@@ -26,7 +26,7 @@ export const AreaChartComponent = () => {
   } satisfies ChartConfig;
 
   return (
-    <div className="bg-white p-5 rounded-lg m-5">
+    <div className="bg-white p-5 rounded-lg mt-5">
       <div className="flex items-center justify-between">
         <h3 className="text-left text-lg font-semibold mb-4">
           Learning Activity

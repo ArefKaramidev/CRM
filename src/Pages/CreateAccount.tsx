@@ -6,7 +6,7 @@ const CreateAccount = () => {
   return (
     <div>
       <Navbar />
-      <div className="ml-72">
+      <div className="ml-80">
         <Header />
         <AccountInformation />
       </div>

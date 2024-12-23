@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="flex items-center text-center justify-center sm:m-0 xl:text-left">
       <Navbar />
-      <div className="w-full sm:ml-72">
+      <div className="w-full sm:ml-80">
         <Header />
         <Card start={0} end={4} />
         <div className="flex flex-col items-center sm:flex-row sm:items-start sm:gap-x-10">

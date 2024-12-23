@@ -14,14 +14,14 @@ const SalesAnalyticks = () => {
   return (
     <div className="flex items-center text-center justify-center sm:m-0 xl:text-left">
       <Navbar />
-      <div className="w-full sm:ml-72">
+      <div className="w-full ml-80">
         <Header />
         <Card start={4} />
-        <div className="flex flex-col items-center gap-x-10 sm:flex-row sm:items-start sm:gap-x-10">
+        <div className="flex m-5 items-center gap-x-10 sm:flex-row sm:items-start sm:gap-x-10">
           <AreaChartComponent />
           <LineChartComponent />
         </div>
-        <div className="mt-96 flex items-start gap-x-10 xl:mt-24">
+        <div className="mt-96 ml-5 flex items-start gap-x-10 xl:mt-24">
           <BarChartComponent />
           <PieChartComponent />
         </div>

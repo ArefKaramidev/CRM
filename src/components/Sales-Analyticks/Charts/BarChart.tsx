@@ -3,8 +3,6 @@ import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import {
   ChartConfig,
   ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from "keep-react";
@@ -31,7 +29,7 @@ export const BarChartComponent = () => {
   } satisfies ChartConfig;
 
   return (
-    <div className="inline-block rounded-lg m-5 bg-white p-5">
+    <div className="inline-block rounded-lg mt-5 bg-white p-5">
       <h3 className="font-bold text-black text-xl m-5">Sales Pipeline</h3>
 
       <ChartContainer config={chartConfig} className="w-[40rem] h-80">

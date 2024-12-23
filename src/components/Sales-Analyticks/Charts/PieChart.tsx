@@ -34,7 +34,7 @@ export const PieChartComponent = () => {
   }, []);
 
   return (
-    <div className="bg-white p-5 rounded-lg m-5">
+    <div className="bg-white p-5 rounded-lg mt-5">
       <div className="flex items-start justify-between">
         <h3 className="font-bold text-xl">Opportunities by Stage</h3>
         <GoKebabHorizontal className="rotate-90 w-5 h-5 cursor-pointer" />

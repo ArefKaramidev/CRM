@@ -3,8 +3,6 @@ import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 import {
   ChartConfig,
   ChartContainer,
-  ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from "keep-react";
@@ -28,7 +26,7 @@ export const LineChartComponent = () => {
   } satisfies ChartConfig;
 
   return (
-    <div className=" bg-white p-5 rounded-lg m-5">
+    <div className=" bg-white p-5 rounded-lg mt-5">
       <div className="flex items-start justify-between">
         <h3 className="text-left text-lg font-semibold mb-4">
           My Monthly Data
