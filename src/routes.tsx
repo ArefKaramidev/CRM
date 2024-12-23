@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./Pages/Home";
 import SalesAnalyticks from "./Pages/SalesAnalyticks";
 import SalesManager from "./Pages/SalesManager";
+import CreateAccount from "./Pages/CreateAccount";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/sales_manager",
     element: <SalesManager />,
+  },
+  {
+    path: "create_account",
+    element: <CreateAccount />,
   },
 ]);
 
