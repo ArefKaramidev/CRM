@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar/Navbar";
 import Header from "../components/Header/Header";
-import Card from "../components/card/Card";
+import Card from "../components/Card/Card";
 import Cases from "../components/Cases/Cases";
 import { Chart } from "../components/Chart/Chart";
 import { DatePickerComponent } from "../components/DatePicker/DatePicker";

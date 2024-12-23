@@ -21,7 +21,7 @@ const getRandomColorClasses = () => {
 };
 
 const TableAccounts = () => {
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
 
   const toggleDropDown = (id: number) => {
     setOpenDropdown((prev) => (prev === id ? null : id));
