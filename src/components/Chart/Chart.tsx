@@ -16,15 +16,20 @@ import {
 
 export const Chart = () => {
   const chartData = [
-    { month: "Jan", Sales: 27, color: "#1B4DFF" },
-    { month: "Feb", Sales: 15, color: "#48d3ff" },
-    { month: "Mar", Sales: 20, color: "#1B4DFF" },
-    { month: "Apr", Sales: 28, color: "#48d3ff" },
-    { month: "May", Sales: 25, color: "#1B4DFF" },
-    { month: "Jun", Sales: 31, color: "#48d3ff" },
-    { month: "July", Sales: 17, color: "#1B4DFF" },
-    { month: "Aug", Sales: 13, color: "#48d3ff" },
+    { month: "Jan", Sales: 27 },
+    { month: "Feb", Sales: 15 },
+    { month: "Mar", Sales: 20 },
+    { month: "Apr", Sales: 28 },
+    { month: "May", Sales: 25 },
+    { month: "Jun", Sales: 31 },
+    { month: "July", Sales: 17 },
+    { month: "Aug", Sales: 13 },
   ];
+
+  const getBarColor = (index: number) => {
+    const colors = ["#1B4DFF", "#48d3ff"];
+    return colors[index % colors.length];
+  };
 
   const chartConfig = {
     desktop: {
@@ -73,9 +78,8 @@ export const Chart = () => {
             }}
           />
           <Bar dataKey="Sales" radius={[8, 8, 0, 0]} barSize={50}>
-            //* for diffrent color
-            {chartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.color} />
+            {chartData.map((_, index) => (
+              <Cell key={`cell-${index}`} fill={getBarColor(index)} />
             ))}
             <LabelList
               position="top"

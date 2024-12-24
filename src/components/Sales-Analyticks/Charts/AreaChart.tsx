@@ -1,4 +1,4 @@
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
+import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts";
 import {
   ChartConfig,
   ChartContainer,
@@ -10,12 +10,11 @@ import { FaChevronDown } from "react-icons/fa6";
 
 export const AreaChartComponent = () => {
   const chartData = [
-    { month: "January", desktop: 186 },
-    { month: "February", desktop: 305 },
-    { month: "March", desktop: 237 },
-    { month: "April", desktop: 73 },
-    { month: "May", desktop: 209 },
-    { month: "June", desktop: 214 },
+    { month: "January", activity: 5, hour: 4 },
+    { month: "February", activity: 9, hour: 6 },
+    { month: "March", activity: 8, hour: 8 },
+    { month: "April", activity: 4, hour: 10 },
+    { month: "May", activity: 11, hour: 12 },
   ];
 
   const chartConfig = {
@@ -42,14 +41,7 @@ export const AreaChartComponent = () => {
       </div>
 
       <ChartContainer config={chartConfig} className="w-[35rem] h-72">
-        <AreaChart
-          accessibilityLayer
-          data={chartData}
-          margin={{
-            left: 12,
-            right: 12,
-          }}
-        >
+        <AreaChart accessibilityLayer data={chartData}>
           <defs>
             <linearGradient id="price" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#1B4DFF" stopOpacity={0.3} />
@@ -57,6 +49,15 @@ export const AreaChartComponent = () => {
             </linearGradient>
           </defs>
           <CartesianGrid vertical={false} />
+
+          <YAxis
+            dataKey="hour"
+            tickLine={false}
+            tickMargin={10}
+            axisLine={true}
+            tickFormatter={(value) => `${value}h`}
+            domain={[4, 12]}
+          />
 
           <XAxis
             dataKey="month"
@@ -70,7 +71,7 @@ export const AreaChartComponent = () => {
             content={<ChartTooltipContent indicator="line" />}
           />
           <Area
-            dataKey="desktop"
+            dataKey="activity"
             type="natural"
             stroke="#1B4DFF"
             fillOpacity={1}

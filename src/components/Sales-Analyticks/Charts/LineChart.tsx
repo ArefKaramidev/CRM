@@ -10,12 +10,12 @@ import { GoKebabHorizontal } from "react-icons/go";
 
 export const LineChartComponent = () => {
   const chartData = [
-    { month: "January", desktop: 186 },
-    { month: "February", desktop: 305 },
-    { month: "March", desktop: 237 },
-    { month: "April", desktop: 73 },
-    { month: "May", desktop: 209 },
-    { month: "June", desktop: 214 },
+    { month: "January", view: 186 },
+    { month: "February", view: 305 },
+    { month: "March", view: 237 },
+    { month: "April", view: 73 },
+    { month: "May", view: 209 },
+    { month: "June", view: 214 },
   ];
 
   const chartConfig = {
@@ -28,9 +28,7 @@ export const LineChartComponent = () => {
   return (
     <div className=" bg-white p-5 rounded-lg mt-5">
       <div className="flex items-start justify-between">
-        <h3 className="text-left text-lg font-semibold mb-4">
-          My Monthly Data
-        </h3>
+        <h3 className="text-left text-lg font-semibold mb-4">Lead Soursse</h3>
         <GoKebabHorizontal className="rotate-90 w-5 h-5 cursor-pointer" />
       </div>
       <ChartContainer config={chartConfig} className="w-96 h-72">
@@ -55,7 +53,7 @@ export const LineChartComponent = () => {
             content={<ChartTooltipContent hideLabel />}
           />
           <Line
-            dataKey="desktop"
+            dataKey="view"
             type="linear"
             stroke="#1B4DFF"
             strokeWidth={2}

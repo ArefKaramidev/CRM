@@ -1,6 +1,6 @@
 "use client";
 import { useMemo } from "react";
-import { Label, Pie, PieChart } from "recharts";
+import { Cell, Label, Pie, PieChart } from "recharts";
 import {
   ChartConfig,
   ChartContainer,
@@ -11,10 +11,16 @@ import { GoKebabHorizontal } from "react-icons/go";
 
 export const PieChartComponent = () => {
   const chartData = [
-    { browser: "Total Paid", visitors: 234, fill: "#3CAAFA" },
-    { browser: "Total Unpiad", visitors: 234, fill: "#9631F5" },
-    { browser: "Total Overdue", visitors: 234, fill: "#38D6EF" },
+    { title: "Total Paid", visitors: 234 },
+    { title: "Total Unpiad", visitors: 234 },
+    { title: "Total Overdue", visitors: 234 },
   ];
+
+  const getBarColor = (index: number) => {
+    const colors = ["#3CAAFA", "#9631F5", "#38D6EF"];
+    return colors[index % colors.length];
+  };
+
   const chartConfig = {
     visitors: {
       label: "Visitors",
@@ -52,10 +58,13 @@ export const PieChartComponent = () => {
           <Pie
             data={chartData}
             dataKey="visitors"
-            nameKey="browser"
+            nameKey="title"
             innerRadius={60}
             strokeWidth={5}
           >
+            {chartData.map((_, index) => (
+              <Cell key={`cell-${index}`} fill={getBarColor(index)} />
+            ))}
             <Label
               content={({ viewBox }) => {
                 if (viewBox && "cx" in viewBox && "cy" in viewBox) {
