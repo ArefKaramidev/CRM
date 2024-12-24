@@ -8,5 +8,6 @@ export type InputT = {
   inputStyle: string;
   parentStyle?: string;
   value?: string;
+  requiredInput?: boolean;
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 };

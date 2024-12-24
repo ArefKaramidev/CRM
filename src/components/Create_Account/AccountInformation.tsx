@@ -27,7 +27,7 @@ const AccountInformation = () => {
   console.log(formData);
 
   return (
-    <div className="m-5">
+    <form className="m-5">
       <div className="felx flex-col space-y-10 ">
         <div className="bg-white p-5 flex flex-col items-start gap-y-10 rounded-xl border-2">
           <div className="flex items-start gap-x-16">
@@ -41,6 +41,7 @@ const AccountInformation = () => {
                 inputStyle="outline-none px-2 py-3 w-full text-sm"
                 parentStyle="border border-slate-300 rounded-md w-80 bg-white mt-2"
                 type="text"
+                requiredInput={true}
               />
             </div>
             <div>
@@ -56,6 +57,7 @@ const AccountInformation = () => {
                   placeHolder="your website"
                   inputStyle="outline-none w-full px-2 py-3 text-sm"
                   type="text"
+                  requiredInput={true}
                 />
               </div>
             </div>
@@ -68,26 +70,28 @@ const AccountInformation = () => {
                 placeHolder="Type your email address"
                 inputStyle="outline-none px-2 py-3 text-sm w-full"
                 parentStyle="border border-slate-300 rounded-md w-80 bg-white mt-2"
-                type="text"
+                type="email"
+                requiredInput={true}
               />
             </div>
           </div>
           <div>
-              <span className="text-gray-500 font-medium">Phone*</span>
-              <div className="border border-slate-300 flex items-center rounded-md w-80 mt-2">
-                <span className="bg-gray-100 text-black px-2 py-3 rounded-md rounded-tr-none rounded-br-none border-r">
-                  Mobile
-                </span>
-                <Input
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeHolder="0913..."
-                  inputStyle="outline-none w-full px-2 py-3 text-sm"
-                  type="text"
-                />
-              </div>
+            <span className="text-gray-500 font-medium">Phone*</span>
+            <div className="border border-slate-300 flex items-center rounded-md w-80 mt-2">
+              <span className="bg-gray-100 text-black px-2 py-3 rounded-md rounded-tr-none rounded-br-none border-r">
+                Mobile
+              </span>
+              <Input
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeHolder="0913..."
+                inputStyle="outline-none w-full px-2 py-3 text-sm"
+                type="tell"
+                requiredInput={true}
+              />
             </div>
+          </div>
         </div>
 
         <div className="bg-white p-5 flex flex-col items-start gap-y-10  rounded-xl border-2">
@@ -143,6 +147,7 @@ const AccountInformation = () => {
                 inputStyle="outline-none px-2 py-3 w-32 text-sm"
                 parentStyle="border border-slate-300 rounded-md w-40 bg-white mt-2"
                 type="text"
+                requiredInput={true}
               />
             </div>
           </div>
@@ -159,6 +164,7 @@ const AccountInformation = () => {
                 inputStyle="outline-none px-2 py-3 w-full text-sm"
                 parentStyle="border border-slate-300 rounded-md w-[30rem] bg-white mt-2"
                 type="text"
+                requiredInput={true}
               />
             </div>
 
@@ -172,6 +178,7 @@ const AccountInformation = () => {
                 inputStyle="outline-none px-2 py-3 text-sm w-full"
                 parentStyle="border border-slate-300 rounded-md w-[30rem] bg-white mt-2"
                 type="text"
+                requiredInput={true}
               />
             </div>
           </div>
@@ -194,7 +201,7 @@ const AccountInformation = () => {
           Save
         </Button>
       </div>
-    </div>
+    </form>
   );
 };
 

@@ -8,6 +8,7 @@ const Input = ({
   inputStyle,
   parentStyle,
   value,
+  requiredInput,
   onChange,
 }: InputT) => {
   return (
@@ -20,6 +21,7 @@ const Input = ({
         value={value}
         name={name}
         onChange={onChange}
+       required={requiredInput}
       />
     </div>
   );

@@ -16,7 +16,7 @@ import Sections from "../Sections";
 import DropdownList from "./DropdownList";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="hidden flex-col w-80 border top-0 left-0 h-full p-5 bg-white fixed z-20 sm:flex overflow-y-auto">
