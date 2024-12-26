@@ -7,7 +7,6 @@ import { CiEdit } from "react-icons/ci";
 import { MdOutlineDelete } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import Input from "../Header/Input";
-
 const getRandomColorClasses = () => {
   const bgColors = [
     "bg-red-500",
