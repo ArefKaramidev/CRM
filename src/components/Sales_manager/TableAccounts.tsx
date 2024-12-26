@@ -32,8 +32,7 @@ const TableAccounts = () => {
   const toggleDropDown = (id: number) => {
     setOpenDropdown((prev) => (prev === id ? null : id));
   };
-  console.log('aref');
-  
+  console.log("aref");
 
   return (
     <div className="mt-10 w-[72rem]">
