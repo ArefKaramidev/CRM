@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import Card from "../components/Card/Card";
-import Header from "../components/Header/Header";
-import Navbar from "../components/Navbar/Navbar";
 import { AreaChartComponent } from "../components/Sales-Analyticks/Charts/AreaChart";
 import { BarChartComponent } from "../components/Sales-Analyticks/Charts/BarChart";
 import { LineChartComponent } from "../components/Sales-Analyticks/Charts/LineChart";
@@ -12,21 +10,17 @@ const SalesAnalyticks = () => {
     scrollTo(0, 0);
   }, []);
   return (
-    <div className="flex items-center text-center justify-center sm:m-0 xl:text-left">
-      <Navbar />
-      <div className="w-full ml-80">
-        <Header />
-        <Card start={4} />
-        <div className="flex m-5 items-center gap-x-10 sm:flex-row sm:items-start sm:gap-x-10">
-          <AreaChartComponent />
-          <LineChartComponent />
-        </div>
-        <div className="mt-96 ml-5 flex items-start gap-x-10 xl:mt-24">
-          <BarChartComponent />
-          <PieChartComponent />
-        </div>
+    <>
+      <Card start={4} />
+      <div className="flex m-5 items-center gap-x-10 sm:flex-row sm:items-start sm:gap-x-10">
+        <AreaChartComponent />
+        <LineChartComponent />
       </div>
-    </div>
+      <div className="mt-96 ml-5 flex items-start gap-x-10 xl:mt-24">
+        <BarChartComponent />
+        <PieChartComponent />
+      </div>
+    </>
   );
 };
 

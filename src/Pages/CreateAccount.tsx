@@ -1,17 +1,7 @@
 import AccountInformation from "../components/Create_Account/AccountInformation";
-import Header from "../components/Header/Header";
-import Navbar from "../components/Navbar/Navbar";
 
 const CreateAccount = () => {
-  return (
-    <div>
-      <Navbar />
-      <div className="ml-80">
-        <Header />
-        <AccountInformation />
-      </div>
-    </div>
-  );
+  return <AccountInformation />;
 };
 
 export default CreateAccount;
