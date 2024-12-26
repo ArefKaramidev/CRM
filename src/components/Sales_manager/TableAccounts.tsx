@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { accounts } from "../../constants/accounts";
 import { GoKebabHorizontal } from "react-icons/go";
-import Input from "../Header/Input";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaPlus } from "react-icons/fa6";
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDelete } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import Input from "../Header/Input";
 
 const getRandomColorClasses = () => {
   const bgColors = [

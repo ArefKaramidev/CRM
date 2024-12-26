@@ -3,8 +3,8 @@ import Home from "./Pages/Home";
 import SalesAnalyticks from "./Pages/SalesAnalyticks";
 import SalesManager from "./Pages/SalesManager";
 import CreateAccount from "./Pages/CreateAccount";
-import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
+import Header from "./components/Header/Header";
 
 // Layout component to wrap Navbar, Header, and child routes
 const Layout = () => (
