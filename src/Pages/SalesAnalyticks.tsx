@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import Card from "../components/card/Card";
 import { AreaChartComponent } from "../components/sales-analytics/Charts/AreaChart";
 import { BarChartComponent } from "../components/sales-analytics/Charts/BarChart";
 import { LineChartComponent } from "../components/sales-analytics/Charts/LineChart";
 import { PieChartComponent } from "../components/sales-analytics/Charts/PieChart";
+import Card from "components/card/Card";
 
 const SalesAnalyticks = () => {
   useEffect(() => {
