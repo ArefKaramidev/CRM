@@ -1,7 +1,7 @@
-import Card from "../components/Card/Card";
-import Cases from "../components/Cases/Cases";
-import { Chart } from "../components/Chart/Chart";
-import { DatePickerComponent } from "../components/DatePicker/DatePicker";
+import Card from "../components/card/Card";
+import Cases from "../components/cases/Cases";
+import { Chart } from "../components/chat/Chart";
+import { DatePickerComponent } from "../components/date_picker/DatePicker";
 import { useEffect } from "react";
 const Home = () => {
   useEffect(() => {

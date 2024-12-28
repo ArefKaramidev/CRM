@@ -14,7 +14,6 @@ import { FcPieChart } from "react-icons/fc";
 
 import Sections from "../Sections";
 import DropdownList from "./DropdownList";
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(true);
 

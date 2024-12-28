@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Button from "../button/Button";
-import Input from "../Header/Input";
+import Input from "../header/Input";
 const AccountInformation = () => {
   const [formData, setFormData] = useState({
     fullName: "",

@@ -1,4 +1,4 @@
-import { analytics } from "../../analytics_data/analytics.ts";
+import { analytics } from "../../analytics_data/analytics.js";
 import CardStructure from "./CardStructure.js";
 
 interface CardProps {

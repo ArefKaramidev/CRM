@@ -3,7 +3,6 @@ import { FaPlus } from "react-icons/fa6";
 import { LuBell } from "react-icons/lu";
 
 import Input from "./Input";
-
 const Header = () => {
   return (
     <div

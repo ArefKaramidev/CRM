@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import TableAccounts from "../components/Sales_manager/TableAccounts";
+import TableAccounts from "../components/sales_manager/TableAccounts";
 
 const SalesManager = () => {
   useEffect(() => {

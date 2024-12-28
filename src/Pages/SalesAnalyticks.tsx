@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Card from "../components/Card/Card";
+import Card from "../components/card/Card";
 import { AreaChartComponent } from "../components/Sales-Analyticks/Charts/AreaChart";
 import { BarChartComponent } from "../components/Sales-Analyticks/Charts/BarChart";
 import { LineChartComponent } from "../components/Sales-Analyticks/Charts/LineChart";
