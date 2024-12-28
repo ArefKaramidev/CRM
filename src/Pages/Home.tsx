@@ -1,8 +1,8 @@
-import { Chart } from "../components/chat/Chart";
-import { DatePickerComponent } from "../components/date_picker/DatePicker";
+import { Chart } from "@/components/chat/Chart";
+import { DatePickerComponent } from "@/components/date_picker/DatePicker";
 import { useEffect } from "react";
-import Cases from "components/cases/Cases";
-import Card from "components/card/Card";
+import Cases from "@/components/cases/Cases";
+import Card from "@/components/card/Card";
 const Home = () => {
   useEffect(() => {
     scrollTo(0, 0);
